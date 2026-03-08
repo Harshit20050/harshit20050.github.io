@@ -23,7 +23,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;transition:background 0.3s,color 0.3s;cursor:auto}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;transition:background 0.3s,color 0.3s}
 
 /* LOADER */
 #loader{position:fixed;inset:0;background:var(--bg);z-index:9990;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity 0.5s,visibility 0.5s}
@@ -42,14 +42,18 @@ body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;fo
 /* NAV */
 nav{position:fixed;top:0;width:100%;z-index:100;padding:16px 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,0.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:background 0.3s}
 [data-theme="light"] nav{background:rgba(240,244,255,0.92)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--white)}.nav-logo span{color:var(--blue)}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--white)}
+.nav-logo span{color:var(--blue)}
 .nav-links{display:flex;gap:24px;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s}.nav-links a:hover{color:var(--blue)}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--blue)}
 .nav-right{display:flex;align-items:center;gap:12px}
 .theme-toggle{width:38px;height:38px;border-radius:8px;background:var(--card-bg);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:border-color 0.2s,box-shadow 0.2s;color:var(--white)}
 .theme-toggle:hover{border-color:var(--blue);box-shadow:0 0 12px var(--blue-glow)}
-.nav-cta{padding:8px 20px;border-radius:6px;background:transparent;border:1px solid var(--blue);color:var(--blue);font-size:0.84rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background 0.2s,box-shadow 0.2s}.nav-cta:hover{background:var(--blue-glow);box-shadow:0 0 18px var(--blue-glow)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
+.nav-cta{padding:8px 20px;border-radius:6px;background:transparent;border:1px solid var(--blue);color:var(--blue);font-size:0.84rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background 0.2s,box-shadow 0.2s}
+.nav-cta:hover{background:var(--blue-glow);box-shadow:0 0 18px var(--blue-glow)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
 
 /* GRID BG */
 .grid-bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(43,127,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(43,127,255,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
@@ -80,7 +84,9 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:16px 6%;display:flex;ali
 .hero-img-inner{width:100%;height:100%;border-radius:50%;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:4.5rem;font-weight:800;color:var(--blue);user-select:none}
 .chip{position:absolute;padding:6px 12px;border-radius:8px;font-size:0.71rem;font-weight:600;backdrop-filter:blur(10px);border:1px solid var(--border);background:rgba(10,10,20,0.85);white-space:nowrap}
 [data-theme="light"] .chip{background:rgba(240,244,255,0.92)}
-.chip-1{top:8%;right:-6%;color:var(--blue)}.chip-2{bottom:10%;left:-8%;color:#a78bfa;border-color:rgba(167,139,250,0.2)}.chip-3{top:50%;right:-10%;color:#34d399;border-color:rgba(52,211,153,0.2)}
+.chip-1{top:8%;right:-6%;color:var(--blue)}
+.chip-2{bottom:10%;left:-8%;color:#a78bfa;border-color:rgba(167,139,250,0.2)}
+.chip-3{top:50%;right:-10%;color:#34d399;border-color:rgba(52,211,153,0.2)}
 
 /* SECTIONS */
 section{padding:88px 6%}
@@ -130,10 +136,9 @@ section{padding:88px 6%}
 
 /* PROJECTS */
 #projects{background:var(--bg)}
-.project-card{border:1px solid var(--border);border-radius:16px;background:var(--card-bg);overflow:hidden;transition:border-color 0.25s,box-shadow 0.25s;max-width:760px}
+.project-card{border:1px solid var(--border);border-radius:16px;background:var(--card-bg);overflow:hidden;transition:border-color 0.25s,box-shadow 0.25s}
 .project-card:hover{border-color:var(--blue);box-shadow:0 0 48px var(--blue-glow2)}
-.project-banner{width:100%;height:190px;background:linear-gradient(135deg,#0d1a30,#0a1225);display:flex;align-items:flex-end;justify-content:center;padding:0 40px;position:relative;overflow:hidden;gap:10px}
-.chart-bar{flex:1;background:linear-gradient(to top,var(--blue),rgba(43,127,255,0.2));border-radius:4px 4px 0 0}
+.project-banner{width:100%;height:190px;background:linear-gradient(135deg,#0d1a30,#0a1225);display:flex;align-items:flex-end;justify-content:center;padding:0 30px;position:relative;overflow:hidden;gap:8px}
 .project-label{position:absolute;top:14px;right:14px;padding:4px 12px;border-radius:6px;background:rgba(43,127,255,0.15);border:1px solid var(--border);font-size:0.7rem;color:var(--blue);font-weight:600}
 .project-body{padding:26px}
 .project-title{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:9px;color:var(--white)}
@@ -142,7 +147,7 @@ section{padding:88px 6%}
 .tech-chip{padding:4px 11px;border-radius:6px;font-size:0.73rem;font-weight:600;border:1px solid var(--border);background:var(--blue-glow2);color:var(--blue)}
 .project-details{display:flex;flex-direction:column;gap:7px}
 .project-detail-item{font-size:0.83rem;color:var(--muted);display:flex;gap:10px}
-.project-detail-item strong{color:var(--white);min-width:58px}
+.project-detail-item strong{color:var(--white);min-width:90px}
 
 /* CERTIFICATIONS */
 #certifications{background:var(--bg2)}
@@ -206,9 +211,12 @@ section{padding:88px 6%}
 
 /* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--white)}.footer-logo span{color:var(--blue)}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--white)}
+.footer-logo span{color:var(--blue)}
 .footer-copy{font-size:0.76rem;color:var(--muted)}
-.footer-links{display:flex;gap:18px;list-style:none}.footer-links a{font-size:0.76rem;color:var(--muted);text-decoration:none;transition:color 0.2s}.footer-links a:hover{color:var(--blue)}
+.footer-links{display:flex;gap:18px;list-style:none}
+.footer-links a{font-size:0.76rem;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--blue)}
 
 /* FLOAT BTNS */
 .float-btns{position:fixed;bottom:28px;right:28px;display:flex;flex-direction:column;gap:12px;z-index:90}
@@ -231,7 +239,8 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
   .form-row{grid-template-columns:1fr}.about-stats{grid-template-columns:1fr 1fr}
 }
 @media(max-width:700px){
-  .nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:var(--bg2);padding:20px;border-bottom:1px solid var(--border);z-index:99}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:var(--bg2);padding:20px;border-bottom:1px solid var(--border);z-index:99}
   .hamburger{display:flex}
   section{padding:70px 5%}
   .about-strengths{grid-template-columns:1fr}
@@ -285,14 +294,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-outline">Contact Me</a>
-        <a href="#" class="btn-outline" onclick="downloadResume(event)">⬇ Download Resume</a>
+        <a href="#" class="btn-outline" onclick="downloadResume(event)">&#11015; Download Resume</a>
       </div>
     </div>
     <div class="hero-img-wrap">
       <div class="hero-img-ring"><div class="hero-img-inner">HS</div></div>
-      <div class="chip chip-1">🔍 Software Testing</div>
-      <div class="chip chip-2">🎓 BCA Student</div>
-      <div class="chip chip-3">📊 Data Analysis</div>
+      <div class="chip chip-1">&#128269; Software Testing</div>
+      <div class="chip chip-2">&#127891; BCA Student</div>
+      <div class="chip chip-3">&#128202; Data Analysis</div>
     </div>
   </div>
 </section>
@@ -309,10 +318,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
         <p>I believe great software comes from both analytical precision and a passion for improvement. I focus on strengthening my programming foundations in C, C++, Python, and R while developing hands-on expertise in manual testing and data analysis.</p>
         <p>Beyond technical skills, I value discipline, emotional intelligence, and a long-term growth mindset — ready to contribute meaningfully to any tech team.</p>
         <div class="about-strengths">
-          <div class="strength-card"><div class="strength-icon">🧠</div><div><div class="strength-label">Analytical Thinking</div></div></div>
-          <div class="strength-card"><div class="strength-icon">🔧</div><div><div class="strength-label">Problem-Solving</div></div></div>
-          <div class="strength-card"><div class="strength-icon">🎯</div><div><div class="strength-label">Attention to Detail</div></div></div>
-          <div class="strength-card"><div class="strength-icon">⚡</div><div><div class="strength-label">Discipline & Consistency</div></div></div>
+          <div class="strength-card"><div class="strength-icon">&#129504;</div><div><div class="strength-label">Analytical Thinking</div></div></div>
+          <div class="strength-card"><div class="strength-icon">&#128295;</div><div><div class="strength-label">Problem-Solving</div></div></div>
+          <div class="strength-card"><div class="strength-icon">&#127919;</div><div><div class="strength-label">Attention to Detail</div></div></div>
+          <div class="strength-card"><div class="strength-icon">&#9889;</div><div><div class="strength-label">Discipline &amp; Consistency</div></div></div>
         </div>
       </div>
       <div class="about-stats reveal d2">
@@ -333,7 +342,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
     <div class="section-divider reveal"></div>
     <div class="skills-grid">
       <div class="reveal">
-        <div class="skill-cat-title">💻 Programming</div>
+        <div class="skill-cat-title">&#128187; Programming</div>
         <div class="skill-tags">
           <span class="skill-tag">C</span><span class="skill-tag">C++</span>
           <span class="skill-tag">Python</span><span class="skill-tag">R</span>
@@ -341,7 +350,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
         </div>
       </div>
       <div class="reveal d1">
-        <div class="skill-cat-title">🔍 Software Testing</div>
+        <div class="skill-cat-title">&#128269; Software Testing</div>
         <div class="skill-tags">
           <span class="skill-tag">SDLC &amp; STLC</span><span class="skill-tag">Bug Life Cycle</span>
           <span class="skill-tag">Manual Testing</span><span class="skill-tag">Test Case Writing</span>
@@ -349,14 +358,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
         </div>
       </div>
       <div class="reveal d2">
-        <div class="skill-cat-title">🗄️ Databases</div>
+        <div class="skill-cat-title">&#128452; Databases</div>
         <div class="skill-tags">
           <span class="skill-tag">MySQL</span><span class="skill-tag">SQL Joins</span>
           <span class="skill-tag">Subqueries</span><span class="skill-tag">Aggregations</span>
         </div>
       </div>
       <div class="reveal d3">
-        <div class="skill-cat-title">📊 Data &amp; Analytics</div>
+        <div class="skill-cat-title">&#128202; Data &amp; Analytics</div>
         <div class="skill-tags">
           <span class="skill-tag">MS Excel</span><span class="skill-tag">Pivot Tables</span>
           <span class="skill-tag">Data Visualization</span><span class="skill-tag">Python Analytics</span>
@@ -364,7 +373,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
         </div>
       </div>
       <div class="reveal d4">
-        <div class="skill-cat-title">🛠️ Tools</div>
+        <div class="skill-cat-title">&#128736; Tools</div>
         <div class="skill-tags">
           <span class="skill-tag">VS Code</span><span class="skill-tag">Git</span>
           <span class="skill-tag">MS Office</span><span class="skill-tag">GitHub</span>
@@ -381,10 +390,30 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
     <h2 class="section-title reveal">My <span>Services</span></h2>
     <div class="section-divider reveal"></div>
     <div class="services-grid">
-      <div class="service-card reveal"><div class="service-icon">🔍</div><div class="service-title">Manual Software Testing</div><p class="service-desc">End-to-end manual testing with thorough documentation and structured reporting.</p><ul class="service-items"><li>Functional &amp; Regression Testing</li><li>Test Case Writing &amp; Execution</li><li>Structured Bug Reporting</li></ul></div>
-      <div class="service-card reveal d1"><div class="service-icon">🌐</div><div class="service-title">Web / App Testing</div><p class="service-desc">Comprehensive testing of websites and applications for quality and usability.</p><ul class="service-items"><li>Usability Testing</li><li>Functionality Validation</li><li>Performance Checks (Basic)</li></ul></div>
-      <div class="service-card reveal d2"><div class="service-icon">🗄️</div><div class="service-title">SQL Query Support</div><p class="service-desc">Database querying and data retrieval using structured SQL approaches.</p><ul class="service-items"><li>Data Retrieval &amp; Filtering</li><li>Joins &amp; Complex Queries</li><li>Basic Data Analysis</li></ul></div>
-      <div class="service-card reveal d3"><div class="service-icon">💻</div><div class="service-title">Programming Support</div><p class="service-desc">Assistance with academic and beginner-level programming projects.</p><ul class="service-items"><li>C, C++ &amp; Python Assistance</li><li>Debugging &amp; Error Fixing</li><li>Logic Building for Projects</li></ul></div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#128269;</div>
+        <div class="service-title">Manual Software Testing</div>
+        <p class="service-desc">End-to-end manual testing with thorough documentation and structured reporting.</p>
+        <ul class="service-items"><li>Functional &amp; Regression Testing</li><li>Test Case Writing &amp; Execution</li><li>Structured Bug Reporting</li></ul>
+      </div>
+      <div class="service-card reveal d1">
+        <div class="service-icon">&#127760;</div>
+        <div class="service-title">Web / App Testing</div>
+        <p class="service-desc">Comprehensive testing of websites and applications for quality and usability.</p>
+        <ul class="service-items"><li>Usability Testing</li><li>Functionality Validation</li><li>Performance Checks (Basic)</li></ul>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="service-icon">&#128452;</div>
+        <div class="service-title">SQL Query Support</div>
+        <p class="service-desc">Database querying and data retrieval using structured SQL approaches.</p>
+        <ul class="service-items"><li>Data Retrieval &amp; Filtering</li><li>Joins &amp; Complex Queries</li><li>Basic Data Analysis</li></ul>
+      </div>
+      <div class="service-card reveal d3">
+        <div class="service-icon">&#128187;</div>
+        <div class="service-title">Programming Support</div>
+        <p class="service-desc">Assistance with academic and beginner-level programming projects.</p>
+        <ul class="service-items"><li>C, C++ &amp; Python Assistance</li><li>Debugging &amp; Error Fixing</li><li>Logic Building for Projects</li></ul>
+      </div>
     </div>
   </div>
 </section>
@@ -393,28 +422,68 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
 <section id="projects">
   <div class="section-inner">
     <p class="section-tag reveal">My Work</p>
-    <h2 class="section-title reveal">Featured <span>Project</span></h2>
+    <h2 class="section-title reveal">Featured <span>Projects</span></h2>
     <div class="section-divider reveal"></div>
-    <div class="project-card reveal">
-      <div class="project-banner">
-        <div class="chart-bar" style="height:40%"></div><div class="chart-bar" style="height:68%"></div>
-        <div class="chart-bar" style="height:52%"></div><div class="chart-bar" style="height:84%"></div>
-        <div class="chart-bar" style="height:30%"></div><div class="chart-bar" style="height:60%"></div>
-        <div class="chart-bar" style="height:44%"></div><div class="chart-bar" style="height:88%"></div>
-        <div class="chart-bar" style="height:50%"></div><div class="chart-bar" style="height:72%"></div>
-        <div class="chart-bar" style="height:35%"></div><div class="chart-bar" style="height:64%"></div>
-        <div class="project-label">Data Analysis</div>
-      </div>
-      <div class="project-body">
-        <div class="project-title">Sales Data Analysis</div>
-        <p class="project-desc">Performed comprehensive sales data analysis to identify revenue trends, uncover top-performing products, and generate actionable monthly insights. Leveraged Excel pivot tables and SQL queries to transform raw data into meaningful visual reports.</p>
-        <div class="project-tech"><span class="tech-chip">MS Excel</span><span class="tech-chip">Pivot Tables</span><span class="tech-chip">SQL</span><span class="tech-chip">Data Visualization</span></div>
-        <div class="project-details">
-          <div class="project-detail-item"><strong>Role:</strong><span>Data cleaning, organization, pivot analysis &amp; visual reporting</span></div>
-          <div class="project-detail-item"><strong>Outcome:</strong><span>Identified top revenue products and monthly growth patterns</span></div>
-          <div class="project-detail-item"><strong>Type:</strong><span>Mini Project — Academic &amp; Self-Initiated</span></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
+
+      <!-- Movie Rating Prediction -->
+      <div class="project-card reveal">
+        <div class="project-banner" style="align-items:flex-end;gap:8px;padding:0 30px">
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:55%"></div>
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:78%"></div>
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:42%"></div>
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:90%"></div>
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:60%"></div>
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:72%"></div>
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:48%"></div>
+          <div style="flex:1;background:linear-gradient(to top,#f59e0b,rgba(245,158,11,0.1));border-radius:4px 4px 0 0;height:83%"></div>
+          <div class="project-label" style="color:#f59e0b;border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.1)">Machine Learning</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">&#127916; Movie Rating Prediction System</div>
+          <p class="project-desc">End-to-end ML system that predicts IMDb-style audience ratings (1.0–10.0) using 4 models — Linear Regression, Ridge, Random Forest &amp; Gradient Boosting. Built on a synthetic dataset of 1,200 movies with 14 features, deployed as a real-time Streamlit web app. BCA Final Year Major Project.</p>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn</span><span class="tech-chip">Streamlit</span>
+            <span class="tech-chip">Pandas</span><span class="tech-chip">NumPy</span><span class="tech-chip">Matplotlib</span>
+          </div>
+          <div class="project-details">
+            <div class="project-detail-item"><strong>Best Model:</strong><span>Gradient Boosting — R² = 0.531, RMSE = 0.748</span></div>
+            <div class="project-detail-item"><strong>Dataset:</strong><span>1,200 synthetic movie records × 14 features</span></div>
+            <div class="project-detail-item"><strong>Type:</strong><span>BCA Final Year Major Project — 2024–2025</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+            <a href="https://github.com/Harshit20050/Movie-Rating-Prediction-System" target="_blank" rel="noopener" class="btn-outline" style="padding:8px 16px;font-size:0.8rem">GitHub</a>
+            <a href="https://movie-rating-prediction-system-rtbtpmw6fdpbqvk2jh7uqt.streamlit.app/" target="_blank" rel="noopener" class="btn-primary" style="padding:8px 16px;font-size:0.8rem">&#127760; Live Demo</a>
+          </div>
         </div>
       </div>
+
+      <!-- Gemini AI Chatbot -->
+      <div class="project-card reveal d1">
+        <div class="project-banner" style="flex-direction:column;align-items:flex-start;justify-content:center;padding:20px 28px;gap:10px">
+          <div style="background:rgba(43,127,255,0.18);border:1px solid rgba(43,127,255,0.3);border-radius:12px 12px 12px 2px;padding:8px 14px;font-size:0.72rem;color:#7eb8ff;max-width:75%">Ask me anything... &#129302;</div>
+          <div style="background:rgba(52,211,153,0.12);border:1px solid rgba(52,211,153,0.25);border-radius:12px 12px 2px 12px;padding:8px 14px;font-size:0.72rem;color:#34d399;align-self:flex-end;max-width:82%">Gemini AI: Sure! Here's what I found...</div>
+          <div style="background:rgba(43,127,255,0.12);border:1px solid rgba(43,127,255,0.2);border-radius:12px 12px 12px 2px;padding:7px 14px;font-size:0.7rem;color:#7eb8ff;max-width:60%">What's a good thriller? &#129300;</div>
+          <div class="project-label" style="color:#34d399;border-color:rgba(52,211,153,0.3);background:rgba(52,211,153,0.08)">Generative AI</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">&#129302; Gemini API AI Chatbot</div>
+          <p class="project-desc">An intelligent conversational AI chatbot powered by Google's Gemini API. Enables natural language interaction with context-aware, multi-turn conversations. Designed with a clean interface supporting real-time responses, session history, and seamless API integration.</p>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span><span class="tech-chip">Gemini API</span><span class="tech-chip">Google AI</span>
+            <span class="tech-chip">NLP</span><span class="tech-chip">Streamlit</span>
+          </div>
+          <div class="project-details">
+            <div class="project-detail-item"><strong>API:</strong><span>Google Gemini — Generative AI model integration</span></div>
+            <div class="project-detail-item"><strong>Features:</strong><span>Multi-turn chat, context memory, real-time responses</span></div>
+            <div class="project-detail-item"><strong>Type:</strong><span>Personal Project — AI &amp; API Integration</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+            <a href="https://github.com/Harshit20050" target="_blank" rel="noopener" class="btn-outline" style="padding:8px 16px;font-size:0.8rem">GitHub</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -426,13 +495,13 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
     <h2 class="section-title reveal">My <span>Certifications</span></h2>
     <div class="section-divider reveal"></div>
     <div class="certs-grid">
-      <div class="cert-card reveal"><div class="cert-icon">🤖</div><div class="cert-title">Foundation to AI Data Science &amp; Analytics</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2024</span></div><a href="https://verify.netcredential.com/roy8TBCJP9" target="_blank" rel="noopener" class="cert-verify">🔗 Verify Certificate</a></div>
-      <div class="cert-card reveal d1"><div class="cert-icon">🐍</div><div class="cert-title">Data Analysis using Python</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">September 2024</span></div><a href="https://verify.netcredential.com/roy8X3KFi5" target="_blank" rel="noopener" class="cert-verify">🔗 Verify Certificate</a></div>
-      <div class="cert-card reveal d2"><div class="cert-icon">📊</div><div class="cert-title">Data Visualization — Tools &amp; Techniques</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8S5XlbW" target="_blank" rel="noopener" class="cert-verify">🔗 Verify Certificate</a></div>
-      <div class="cert-card reveal d3"><div class="cert-icon">🔬</div><div class="cert-title">Data Science — Tools and Techniques</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8vTdTIQ" target="_blank" rel="noopener" class="cert-verify">🔗 Verify Certificate</a></div>
-      <div class="cert-card reveal d1"><div class="cert-icon">🧠</div><div class="cert-title">Foundation of Machine Learning &amp; Pattern Recognition</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8VFcnB2" target="_blank" rel="noopener" class="cert-verify">🔗 Verify Certificate</a></div>
-      <div class="cert-card reveal d2"><div class="cert-icon">⚡</div><div class="cert-title">Big Data Analytics with Spark</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8x1PgTa" target="_blank" rel="noopener" class="cert-verify">🔗 Verify Certificate</a></div>
-      <div class="cert-card reveal d3"><div class="cert-icon">💬</div><div class="cert-title">Business Communication — BEGS-186 (Score: 77%)</div><div class="cert-meta"><span class="cert-platform">SWAYAM / IGNOU</span><span class="cert-date">February 2026</span></div><a href="https://onlinecourses.swayam2.ac.in/nou25_mg24/certificate?q=Pj6q/AKhz%2BvP1nJnhQ78yGp98U2l1paE6VZKYt4h5TArvXKCTt%2BoNF/RA8dDR89Q" target="_blank" rel="noopener" class="cert-verify">🔗 Verify Certificate</a></div>
+      <div class="cert-card reveal"><div class="cert-icon">&#129504;</div><div class="cert-title">Foundation to AI Data Science &amp; Analytics</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2024</span></div><a href="https://verify.netcredential.com/roy8TBCJP9" target="_blank" rel="noopener" class="cert-verify">&#128279; Verify Certificate</a></div>
+      <div class="cert-card reveal d1"><div class="cert-icon">&#128013;</div><div class="cert-title">Data Analysis using Python</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">September 2024</span></div><a href="https://verify.netcredential.com/roy8X3KFi5" target="_blank" rel="noopener" class="cert-verify">&#128279; Verify Certificate</a></div>
+      <div class="cert-card reveal d2"><div class="cert-icon">&#128202;</div><div class="cert-title">Data Visualization — Tools &amp; Techniques</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8S5XlbW" target="_blank" rel="noopener" class="cert-verify">&#128279; Verify Certificate</a></div>
+      <div class="cert-card reveal d3"><div class="cert-icon">&#128300;</div><div class="cert-title">Data Science — Tools and Techniques</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8vTdTIQ" target="_blank" rel="noopener" class="cert-verify">&#128279; Verify Certificate</a></div>
+      <div class="cert-card reveal d1"><div class="cert-icon">&#129504;</div><div class="cert-title">Foundation of Machine Learning &amp; Pattern Recognition</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8VFcnB2" target="_blank" rel="noopener" class="cert-verify">&#128279; Verify Certificate</a></div>
+      <div class="cert-card reveal d2"><div class="cert-icon">&#9889;</div><div class="cert-title">Big Data Analytics with Spark</div><div class="cert-meta"><span class="cert-platform">Samatrix.io</span><span class="cert-date">January 2026</span></div><a href="https://verify.netcredential.com/roy8x1PgTa" target="_blank" rel="noopener" class="cert-verify">&#128279; Verify Certificate</a></div>
+      <div class="cert-card reveal d3"><div class="cert-icon">&#128172;</div><div class="cert-title">Business Communication — BEGS-186 (Score: 77%)</div><div class="cert-meta"><span class="cert-platform">SWAYAM / IGNOU</span><span class="cert-date">February 2026</span></div><a href="https://onlinecourses.swayam2.ac.in/nou25_mg24/certificate?q=Pj6q/AKhz%2BvP1nJnhQ78yGp98U2l1paE6VZKYt4h5TArvXKCTt%2BoNF/RA8dDR89Q" target="_blank" rel="noopener" class="cert-verify">&#128279; Verify Certificate</a></div>
     </div>
   </div>
 </section>
@@ -449,7 +518,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
         <div class="timeline-card">
           <div class="timeline-year">2023 – 2026 · Expected</div>
           <div class="timeline-degree">Bachelor of Computer Applications (BCA)</div>
-          <div class="timeline-inst">🏛️ JECRC University, Jaipur, Rajasthan</div>
+          <div class="timeline-inst">&#127963; JECRC University, Jaipur, Rajasthan</div>
           <p style="font-size:0.83rem;color:var(--muted);margin-top:10px;line-height:1.75">Specializing in programming fundamentals, software testing, database management, and data analysis. Building a strong foundation across C, C++, Python, R, MySQL, and quality assurance practices.</p>
         </div>
       </div>
@@ -458,7 +527,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
         <div class="timeline-card">
           <div class="timeline-year" style="color:#a78bfa">2024 – 2026 · Ongoing</div>
           <div class="timeline-degree">Professional Certifications — 7 Completed</div>
-          <div class="timeline-inst">📚 Samatrix.io &amp; SWAYAM / IGNOU</div>
+          <div class="timeline-inst">&#128218; Samatrix.io &amp; SWAYAM / IGNOU</div>
           <p style="font-size:0.83rem;color:var(--muted);margin-top:10px;line-height:1.75">Earned certifications in AI Data Science, Python, Data Visualization, ML, Big Data with Spark, and Business Communication — demonstrating continuous self-learning and real-world skill development.</p>
         </div>
       </div>
@@ -527,7 +596,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
           <div class="form-group"><label>Subject</label><input type="text" id="subject" placeholder="Opportunity / Collaboration / Query"/></div>
           <div class="form-group"><label>Message</label><textarea id="message" rows="5" placeholder="Write your message here..." required></textarea></div>
           <div class="form-status" id="formStatus"></div>
-          <button type="submit" class="btn-primary" id="submitBtn" style="width:100%;padding:13px">Send Message ✉️</button>
+          <button type="submit" class="btn-primary" id="submitBtn" style="width:100%;padding:13px">Send Message &#9993;</button>
         </form>
       </div>
     </div>
@@ -537,7 +606,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">H<span>.</span>Sharma</div>
-  <p class="footer-copy">© 2026 Harshit Sharma · All rights reserved.</p>
+  <p class="footer-copy">&#169; 2026 Harshit Sharma &middot; All rights reserved.</p>
   <ul class="footer-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -551,125 +620,140 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:26px 6%;d
   <a class="float-btn" href="https://wa.me/917691055195" target="_blank" title="Chat on WhatsApp">
     <img src="assets/icons/whatsapp.png" alt="WhatsApp"/>
   </a>
-  <button class="float-btn top" id="backToTop" onclick="scrollToTop()" title="Back to top">↑</button>
+  <button class="float-btn top" id="backToTop" onclick="scrollToTop()" title="Back to top">&#8593;</button>
 </div>
 
 <script>
+/* ── CONFIG ─────────────────────────────── */
 const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+const RESUME_URL          = ''; // paste Google Drive or ./assets/resume.pdf
 
-/* LOADER */
-window.addEventListener('load',()=>{
-  setTimeout(()=>document.getElementById('loader').classList.add('hidden'),2000);
-});
+/* ── LOADER ─────────────────────────────── */
+function hideLoader(){
+  var l = document.getElementById('loader');
+  if(l) l.classList.add('hidden');
+}
+document.addEventListener('DOMContentLoaded', function(){ setTimeout(hideLoader, 1800); });
+window.addEventListener('load', function(){ setTimeout(hideLoader, 1800); });
+setTimeout(hideLoader, 2500);
 
-/* TYPING */
-const phrases=['BCA Student','Problem Solver','Tech Enthusiast','Software Tester','Data Analyst'];
-let pi=0,ci=0,deleting=false;
-const typEl=document.getElementById('typingText');
+/* ── EMAILJS ─────────────────────────────── */
+if(EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY'){
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
+/* ── TYPING EFFECT ───────────────────────── */
+var phrases = ['BCA Student','Problem Solver','Tech Enthusiast','Software Tester','Data Analyst'];
+var pi = 0, ci = 0, deleting = false;
+var typEl = document.getElementById('typingText');
 function type(){
-  const word=phrases[pi];
-  typEl.textContent=deleting?word.substring(0,ci--):word.substring(0,ci++);
-  let delay=deleting?60:100;
-  if(!deleting&&ci===word.length+1){delay=1800;deleting=true;}
-  else if(deleting&&ci===0){deleting=false;pi=(pi+1)%phrases.length;delay=400;}
-  setTimeout(type,delay);
+  var word = phrases[pi];
+  typEl.textContent = deleting ? word.substring(0, ci--) : word.substring(0, ci++);
+  var delay = deleting ? 60 : 100;
+  if(!deleting && ci === word.length + 1){ delay = 1800; deleting = true; }
+  else if(deleting && ci === 0){ deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
+  setTimeout(type, delay);
 }
 type();
 
-/* THEME */
-const themeBtn=document.getElementById('themeToggle');
-const applyTheme=(t)=>{
-  document.documentElement.setAttribute('data-theme',t);
-  themeBtn.textContent=t==='dark'?'☀️':'🌙';
-  localStorage.setItem('theme',t);
-};
-themeBtn.addEventListener('click',()=>{
-  applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');
-});
-applyTheme(localStorage.getItem('theme')||'dark');
-
-/* COUNTERS */
-function animateCounter(el){
-  const target=+el.dataset.target;
-  const duration=target>100?2000:1000;
-  const step=target/(duration/16);
-  let current=0;
-  const timer=setInterval(()=>{
-    current=Math.min(current+step,target);
-    el.textContent=Math.floor(current);
-    if(current>=target)clearInterval(timer);
-  },16);
+/* ── THEME ───────────────────────────────── */
+var themeBtn = document.getElementById('themeToggle');
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  themeBtn.textContent = t === 'dark' ? '☀️' : '🌙';
+  try{ localStorage.setItem('theme', t); }catch(e){}
 }
-const cObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);cObs.unobserve(e.target);}});
-},{threshold:0.5});
-document.querySelectorAll('.counter').forEach(c=>cObs.observe(c));
+themeBtn.addEventListener('click', function(){
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+try{ applyTheme(localStorage.getItem('theme') || 'dark'); }catch(e){ applyTheme('dark'); }
 
-/* SCROLL REVEAL */
-const io=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+/* ── COUNTERS ────────────────────────────── */
+function animateCounter(el){
+  var target = +el.dataset.target;
+  var duration = target > 100 ? 2000 : 1000;
+  var step = target / (duration / 16);
+  var current = 0;
+  var timer = setInterval(function(){
+    current = Math.min(current + step, target);
+    el.textContent = Math.floor(current);
+    if(current >= target) clearInterval(timer);
+  }, 16);
+}
+var cObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ animateCounter(e.target); cObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(function(c){ cObs.observe(c); });
 
-/* BACK TO TOP */
-const topBtn=document.getElementById('backToTop');
-window.addEventListener('scroll',()=>topBtn.classList.toggle('visible',window.scrollY>400));
-function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+/* ── SCROLL REVEAL ───────────────────────── */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(function(r){ io.observe(r); });
 
-/* COPY EMAIL */
-function copyText(text,btn){
-  navigator.clipboard.writeText(text).then(()=>{
-    btn.textContent='✓ Copied';btn.classList.add('copied');
-    setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied');},2000);
+/* ── BACK TO TOP ─────────────────────────── */
+var topBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', function(){ topBtn.classList.toggle('visible', window.scrollY > 400); });
+function scrollToTop(){ window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+/* ── COPY EMAIL ──────────────────────────── */
+function copyText(text, btn){
+  navigator.clipboard.writeText(text).then(function(){
+    btn.textContent = '✓ Copied'; btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
   });
 }
 
-/* MOBILE NAV */
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
-document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+/* ── MOBILE NAV ──────────────────────────── */
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
+document.querySelectorAll('.nav-links a').forEach(function(l){
+  l.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
+});
 
-/* EMAILJS */
+/* ── SEND EMAIL ──────────────────────────── */
 async function sendEmail(e){
   e.preventDefault();
-  const btn=document.getElementById('submitBtn');
-  const status=document.getElementById('formStatus');
-  if(EMAILJS_PUBLIC_KEY==='YOUR_PUBLIC_KEY'){
-    status.className='form-status error';
-    status.textContent='⚠️ Configure EmailJS credentials first.';
+  var btn = document.getElementById('submitBtn');
+  var status = document.getElementById('formStatus');
+  if(EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY'){
+    status.className = 'form-status error';
+    status.textContent = '⚠️ Configure EmailJS credentials first.';
     return;
   }
-  btn.textContent='Sending…';btn.disabled=true;
-  status.className='form-status';status.style.display='none';
+  btn.textContent = 'Sending…'; btn.disabled = true;
+  status.className = 'form-status'; status.style.display = 'none';
   try{
-    await emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,{
-      from_name:document.getElementById('from_name').value,
-      from_email:document.getElementById('from_email').value,
-      subject:document.getElementById('subject').value||'Portfolio Contact',
-      message:document.getElementById('message').value,
-      to_name:'Harshit Sharma',
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      from_name:  document.getElementById('from_name').value,
+      from_email: document.getElementById('from_email').value,
+      subject:    document.getElementById('subject').value || 'Portfolio Contact',
+      message:    document.getElementById('message').value,
+      to_name:    'Harshit Sharma',
     });
-    status.className='form-status success';
-    status.textContent="✅ Message sent! I'll get back to you soon.";
+    status.className = 'form-status success';
+    status.textContent = "✅ Message sent! I'll get back to you soon.";
     document.getElementById('contactForm').reset();
-  }catch(err){
-    status.className='form-status error';
-    status.textContent='❌ Failed. Please email harshitsharma7691@gmail.com directly.';
-  }finally{
-    btn.textContent='Send Message ✉️';btn.disabled=false;
+  } catch(err){
+    status.className = 'form-status error';
+    status.textContent = '❌ Failed. Please email harshitsharma7691@gmail.com directly.';
+  } finally{
+    btn.textContent = 'Send Message ✉️'; btn.disabled = false;
   }
 }
 
-/* RESUME */
+/* ── RESUME DOWNLOAD ─────────────────────── */
 function downloadResume(e){
   e.preventDefault();
-  const RESUME_URL='';
-  if(!RESUME_URL){alert('📄 Resume coming soon!\nContact: harshitsharma7691@gmail.com');return;}
-  const a=document.createElement('a');
-  a.href=RESUME_URL;a.download='Harshit_Sharma_Resume.pdf';a.target='_blank';
-  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  if(!RESUME_URL){
+    alert('Resume link not configured yet. Add your PDF URL in the RESUME_URL variable.');
+    return;
+  }
+  var a = document.createElement('a');
+  a.href = RESUME_URL;
+  a.download = 'Harshit_Sharma_Resume.pdf';
+  a.click();
 }
 </script>
 </body>
